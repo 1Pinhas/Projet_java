@@ -1,0 +1,3 @@
+.hidden {
+  -fx-opacity: 0; /* Masque complètement l'élément */
+}

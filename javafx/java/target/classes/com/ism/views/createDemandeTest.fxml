@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane prefHeight="500.0" prefWidth="451.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ism.controllers.CreateDemandeTestController">
+    <children>
+        <!-- Header Section -->
+        <AnchorPane prefHeight="60.0" prefWidth="450.0" style="-fx-background-color: #87CEEB;">
+            <children>
+                <Label layoutX="20.0" layoutY="20.0" style="-fx-text-fill: white; -fx-font-size: 20px;" text="Création de la demande" />
+            </children>
+        </AnchorPane>
+         <!-- Customer Information -->
+         <HBox layoutX="-7.0" layoutY="65.0" spacing="10" />
+          <Label layoutX="53.0" layoutY="88.0" />
+
+         <!-- Article and Quantity Selection -->
+         <HBox layoutX="34.0" layoutY="124.0" spacing="10">
+             <Label text="Article:" />
+             <ChoiceBox fx:id="articleChoiceBox" />
+             <Label text="Quantité:" />
+             <TextField fx:id="quantityField" promptText="Quantité" />
+             <Button onAction="#addLineItem" style="-fx-background-color: #87CEEB;" text="Ajouter" />
+         </HBox>
+
+         <!-- Save Button -->
+         <Button layoutX="371.0" layoutY="420.0" onAction="#saveInvoice" style="-fx-background-color: #87CEEB;" text="save" />
+          <HBox alignment="CENTER_RIGHT" layoutX="53.0" layoutY="383.0" spacing="10">
+                <Label text="Total:" />
+                <Label fx:id="totalLabe" />
+            </HBox>
+      <TableView fx:id="lineItemsTable" layoutX="53.0" layoutY="184.0" prefHeight="190.0" prefWidth="358.0">
+         <columns>
+            <TableColumn fx:id="libelleColumn" prefWidth="85.0" style="-fx-background-color: #87CEEB;" text="Libelle" />
+            <TableColumn fx:id="prixColumn" prefWidth="85.0" style="-fx-background-color: #87CEEB;" text="Prix" />
+            <TableColumn fx:id="qteStockColumn" prefWidth="85.0" style="-fx-background-color: #87CEEB;" text="QteStock" />
+            <TableColumn fx:id="refColumn1" prefWidth="100.0" style="-fx-background-color: #87CEEB;" text="Ref" />
+         </columns>
+      </TableView>
+      <HBox alignment="CENTER_RIGHT" layoutX="72.0" layoutY="70.0" spacing="10">
+         <children>
+            <Label text="Nom du client:" />
+            <Label fx:id="client" />
+         </children>
+      </HBox>
+    </children>
+</AnchorPane>

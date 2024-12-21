@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ism.controllers.VoirArticleController">
+   <items>
+      <fx:include source="Sidebar.fxml" />
+      
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="498.0" prefWidth="474.0">
+         <children>
+            <AnchorPane layoutX="1.0" layoutY="-1.0" prefHeight="86.0" prefWidth="487.0" style="-fx-background-color: #87CEEB;">
+               <children>
+                  <Text fill="WHITE" layoutX="14.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Voire les articles">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="14.0" layoutY="110.0" prefHeight="37.0" prefWidth="106.0" style="-fx-border-color: #000000;">
+               <children>
+                  <Text layoutX="31.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Article">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="120.0" layoutY="204.0" prefHeight="170.0" prefWidth="278.0" style="-fx-border-color: #D3D3D3; -fx-border-radius: 3px;">
+               <children>
+
+                  <TableView fx:id="tableView" layoutX="10.0" layoutY="14.0" prefHeight="114.0" prefWidth="258.0">
+                     <columns>
+                        <TableColumn fx:id="articleColumn" prefWidth="85.0" style="-fx-background-color: #87CEEB;" text="Article" />
+                        <TableColumn fx:id="prixColumn" prefWidth="85.0" style="-fx-background-color: #87CEEB;" text="Prix" />
+                        <TableColumn fx:id="qteColumn" prefWidth="85.0" style="-fx-background-color: #87CEEB;" text="Quantité" />
+                     </columns>
+                  </TableView>
+                  <Pagination fx:id="pagination" layoutX="78.0" layoutY="128.0" prefHeight="50.0" prefWidth="200.0" />
+
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </items>
+</SplitPane>

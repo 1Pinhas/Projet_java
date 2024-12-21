@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ism.controllers.DemandeBoutiquierController">
+   <items>
+      <fx:include source="Sidebar.fxml" />
+      
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="498.0" prefWidth="474.0">
+         <children>
+            <TextField fx:id="searchField" layoutX="25.0" layoutY="140.0" promptText="Search id dette" />
+            <TableView fx:id="tableView" layoutX="65.0" layoutY="243.0" prefHeight="175.0" prefWidth="359.0">
+               <columns>
+                  <TableColumn fx:id="idColumn" prefWidth="85.0" style="-fx-background-color: #87CEEB;" text="Id" />
+                  <TableColumn fx:id="dateColumn" prefWidth="85.0" style="-fx-background-color: #87CEEB;" text="Date" />
+                  <TableColumn fx:id="nomClientColumn" prefWidth="85.0" style="-fx-background-color: #87CEEB;" text="Nom Client" />
+                  <TableColumn fx:id="actionsColumn1" prefWidth="100.0" style="-fx-background-color: #87CEEB;" text="Actions" />
+               </columns>
+            </TableView>
+            <Button layoutX="189.0" layoutY="140.0" mnemonicParsing="false" onAction="#search" style="-fx-background-color: #87CEEB;" text="Search" />
+            <AnchorPane layoutX="1.0" layoutY="-1.0" prefHeight="86.0" prefWidth="487.0" style="-fx-background-color: #87CEEB;">
+               <children>
+                  <Text fill="WHITE" layoutX="14.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste de demandes">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <Button layoutX="285.0" layoutY="202.0" mnemonicParsing="false" onAction="#handleAllSoldButtonClick" style="-fx-background-color: #87CEEB;" text="All" />
+            <Button layoutX="329.0" layoutY="202.0" mnemonicParsing="false" onAction="#handleSoldButtonClick" style="-fx-background-color: #87CEEB;" text="En cours" />
+            <Button layoutX="403.0" layoutY="202.0" mnemonicParsing="false" onAction="#handleNoSoldButtonClick" style="-fx-background-color: #f40505;" text="Annuler" />
+            <Pagination fx:id="pagination" layoutX="270.0" layoutY="419.0" prefHeight="50.0" prefWidth="200.0" />
+            <Button layoutX="370.0" layoutY="140.0" mnemonicParsing="false" onAction="#handleArticleButtonClick" style="-fx-background-color: #87CEEB;" text="Voir les articles" />
+         </children>
+      </AnchorPane>
+   </items>
+</SplitPane>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:controller="com.ism.controllers.SidebarController" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" minHeight="0.0" minWidth="0.0" prefHeight="498.0" prefWidth="234.0" style="-fx-background-color: #87CEEB;">
+    <children>
+        <FontAwesomeIcon fill="WHITE" glyphName="BOOK" layoutX="14.0" layoutY="68.0" size="50" />
+        <FontAwesomeIcon fill="WHITE" glyphName="SIGN_OUT" layoutX="166.0" layoutY="481.0" size="20" onMouseClicked="#deconnexion" />
+        
+        <Text fill="WHITE" layoutX="60.0" layoutY="45.0" text="Gestion du cahier de dette" textAlignment="CENTER" wrappingWidth="157.31365966796875">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        
+        <Button text="Comptes" layoutX="54.0" layoutY="130.0" onAction="#goToComptes2" style="-fx-background-color: transparent; -fx-text-fill: white;">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Button>
+        
+        <Button text="Dettes" layoutX="54.0" layoutY="172.0" onAction="#goToDettes2" style="-fx-background-color: transparent; -fx-text-fill: white;">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Button>
+        
+        <Button text="Articles" layoutX="54.0" layoutY="213.0" onAction="#goToArticles" style="-fx-background-color: transparent; -fx-text-fill: white;">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Button>
+        
+        <Text fill="WHITE" layoutX="17.0" layoutY="481.0" text="Admin">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Text>
+    </children>
+</AnchorPane>

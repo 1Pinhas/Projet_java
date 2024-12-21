@@ -1,0 +1,27 @@
+persistence:
+  active: "DETTES_POSTGRES" #DETTES_MYSQL #DETTES_POSTGRES
+#repository.client
+#repository.user
+repository:
+  client: com.ism.Repositories.JPA.ClientRepoJpa
+  user: com.ism.Repositories.JPA.UserRepoJpa
+  article: com.ism.Repositories.JPA.ArticleRepoJpa
+  demande: com.ism.Repositories.JPA.DemandeRepoJpa
+  detail: com.ism.Repositories.JPA.DetailRepoJpa
+  dette: com.ism.Repositories.JPA.DetteRepoJpa
+  paiement: com.ism.Repositories.JPA.PaiementRepoJpa
+service:
+  client: com.ism.Service.ClientService
+  user: com.ism.Service.UserService
+  article: com.ism.Service.ArticleService
+  demande: com.ism.Service.DemandeService
+  detail: com.ism.Service.DetailServices
+  dette: com.ism.Service.DetteService
+  paiement: com.ism.Service.PaiementService
+view:
+  client: com.ism.Views.ClientViews
+  user: com.ism.Views.UserViews
+  article: com.ism.Views.ArticleViews
+  demande: com.ism.Views.DemandeViews
+  dette: com.ism.Views.DetteViews
+  paiement: com.ism.Views.PaiementViews
